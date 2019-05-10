@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  background: red;
+  border-radius: 0.5rem;
+}
+
+.login {
+  width: 70%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+input {
+  width: 30%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  background: green;
+  color: white;
+  font-weight: bold;
+}
+
+.jokes {
+  text-align: center;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.joke-list div {
+  padding: 0.9rem;
+}
+
+.joke-list div:hover {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  text-align: center;
+}
