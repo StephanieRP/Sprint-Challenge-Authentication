@@ -30,33 +30,35 @@ class Login extends Component {
 
   render() {
     return (
-      <>
+      <div className="login">
         <h2>Login</h2>
         <form onSubmit={this.submitHandler}>
           <div>
-            <label htmlFor="username">Username</label>
+            <label htmlFor="username" />
 
             <input
               id="username"
               onChange={this.changeHandler}
               value={this.state.username}
               type="text"
+              placeholder="Username"
             />
           </div>
           <div>
-            <label htmlFor="password"> Password</label>
+            <label htmlFor="password" />
             <input
               id="password"
               onChange={this.changeHandler}
               value={this.state.password}
               type="password"
+              placeholder="Password"
             />
           </div>
           <div>
             <button type="submit">Login</button>
           </div>
         </form>
-      </>
+      </div>
     );
   }
 }

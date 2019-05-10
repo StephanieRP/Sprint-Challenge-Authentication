@@ -8,19 +8,6 @@ class Jokes extends Component {
     jokes: []
   };
 
-  render() {
-    return (
-      <>
-        <h2>My current Jokes</h2>
-        <ul>
-          {this.state.jokes.map(joke => (
-            <li key={joke.id}>{joke.joke}</li>
-          ))}
-        </ul>
-      </>
-    );
-  }
-
   componentDidMount() {
     const endpoint = "/jokes";
     const token = localStorage.getItem("token");
@@ -35,6 +22,19 @@ class Jokes extends Component {
         this.setState({ jokes: res.data });
       })
       .catch(err => console.error(err));
+  }
+
+  render() {
+    return (
+      <div className="jokes">
+        <h2>My current Jokes</h2>
+        <div className="joke-list">
+          {this.state.jokes.map(joke => (
+            <div key={joke.id}>{joke.joke}</div>
+          ))}
+        </div>
+      </div>
+    );
   }
 }
 
